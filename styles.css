@@ -1,0 +1,235 @@
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-stone-100: hsl(30, 54%, 90%);
+    --clr-stone-150: hsl(30, 18%, 87%);
+    --clr-stone-600: hsl(30, 10%, 34%);
+    --clr-stone-900: hsl(24, 5%, 18%);
+    --clr-brown-800: hsl(14, 45%, 36%);
+    --clr-rose-800: hsl(332, 51%, 32%);
+    --clr-rose-50: hsl(330, 100%, 98%);
+  
+    --ff-young-serif: "Young Serif", Serif;
+    --ff-outfit: "Outfit", sans-serif;
+  
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+  
+    --fs-small-title: calc(18rem / 16);
+  }
+  
+  /* CSS reset */
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Prevent font size inflation */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+  
+  /* Remove default margin in favour of better control in authored CSS */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin-block-end: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  
+  /* Set shorter line heights on headings and interactive elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  /* Make sure textareas without a rows attribute are not tiny */
+  textarea:not([rows]) {
+    min-height: 10em;
+  }
+  
+  /* Anything that has been anchored to should have extra scroll margin */
+  :target {
+    scroll-margin-block: 5ex;
+  }
+  
+  /* utilities */
+  
+  .flex-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-group-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bolder {
+    font-weight: var(--fw-bolder);
+  }
+  
+  /* general styling */
+  
+  body {
+    background-color: var(--clr-rose-50);
+    color: var(--clr-stone-600);
+    font-family: var(--ff-outfit);
+    margin: 0;
+  }
+  
+  .recipe {
+    background-color: var(--clr-white);
+    max-width: calc(780rem / 16);
+  }
+  
+  .recipe__content {
+    padding: 0 calc(30rem / 16) calc(50rem / 16);
+  }
+  
+  h1 {
+    font-size: calc(36rem / 16);
+    color: var(--clr-stone-900);
+  }
+  
+  h1,
+  h2 {
+    font-family: var(--ff-young-serif);
+    font-weight: var(--fw-normal);
+  }
+  
+  h2 {
+    color: var(--clr-brown-800);
+    font-size: calc(28rem / 16);
+  }
+  
+  .list {
+    padding-left: 1.3rem;
+  }
+  
+  li {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .list li::marker {
+    color: var(--clr-brown-800);
+  }
+  
+  ul li::marker {
+    font-size: 0.8rem;
+  }
+  
+  ol li::marker {
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-bolder);
+  }
+  
+  .prep h2 {
+    color: var(--clr-rose-800);
+    font-size: calc(20rem / 16);
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-bolder);
+  }
+  
+  .prep {
+    background-color: var(--clr-rose-50);
+    margin-top: calc(30rem / 16);
+    padding: calc(10rem / 16) 0 calc(10rem / 16) calc(20rem / 16);
+    border-radius: 10px;
+  }
+  
+  .prep__list li::marker {
+    color: var(--clr-rose-800);
+  }
+  
+  .nutrients_and_values {
+    margin-top: 1.3rem;
+  }
+  
+  .nutrient_and_value {
+    padding-left: 2rem;
+    padding-right: 7rem;
+    max-width: calc(600rem / 16);
+  }
+  
+  .value {
+    color: var(--clr-brown-800);
+    font-weight: var(--fw-bolder);
+  }
+  
+  hr {
+    color: rgba(255, 255, 255, 0.656);
+  }
+  
+  @media (min-width: 37.5em) {
+    body {
+      margin: 1rem;
+    }
+  
+    .recipe {
+      border-radius: 20px;
+      padding: calc(32rem / 16);
+    }
+  
+    .recipe__img {
+      border-radius: 10px;
+    }
+  
+    .recipe__content {
+      padding: 0;
+    }
+  }
+  
